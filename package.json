@@ -1,0 +1,25 @@
+{
+  "name": "constructor-hangman",
+  "version": "1.0.0",
+  "description": "hangman command-line game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchan902/constructor-hangman.git"
+  },
+  "keywords": [
+    "hangman"
+  ],
+  "author": "Karina C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kchan902/constructor-hangman/issues"
+  },
+  "homepage": "https://github.com/kchan902/constructor-hangman#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0"
+  }
+}
