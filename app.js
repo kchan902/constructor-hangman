@@ -2,31 +2,20 @@ var inquirer = require('inquirer');
 
 var wordBank = ["leopard", "alligator", "flower", "power", "hipster"];
 
-//word array
-
-//select from wordbank
+// var answer = wordBank[Math.floor(Math.random() * (wordBank.length - 1)];
 
 
-
-function Question(answer) {
+function Question() {
 	var context = this;
-	this.answer = new Word(answer);
+	this.answer = new Word(getRandomWord(wordBank));
 	this.count = 10;
 	this.name = "bogus_name_FIXME";
 	this.type = "input";
 	this.message = getMessage();
 
-	Question.prototype.getRandomWord = function getRandomWord(wordBank) {
-		for (var i = 0; i < wordBank.length; i++)
+	function getRandomWord(wordBank) {
+		return wordBank[Math.floor(Math.random() * (wordBank.length - 1))];
 	}
-
-	//write out math.random selector to choose from the wordBank and pass it into answer
-	//need to restart game after lives are 0 or word is completely guessed
-
-	//write a function to select next word
-
-	Question ()
-
 
 	Question.prototype.validate = function validate(input) {
 		if (!input || input.trim().length > 1) {
@@ -96,7 +85,7 @@ Letter.prototype.getLetter = function() {
 	}
 }
 
-let question = new Question("Hangman");
+let question = new Question();
 
 function askUserQuestion() {
 	inquirer.prompt([question]).then(function callback(answer) {
@@ -107,3 +96,6 @@ function askUserQuestion() {
 }
 
 askUserQuestion();
+
+
+
